@@ -1,0 +1,70 @@
+body {
+  font-family: "FF Din", sans-serif;
+}
+
+h1 {
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-bottom: 0;
+  font-style: oblique;
+}
+
+h3 {
+  margin-left: 30px;
+  font-size: 24px;
+  margin: 0;
+}
+
+nav {
+  text-align: right;
+  margin-right: 10px;
+  margin-top: -50px;
+  list-style-position: inside;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 2em;
+  text-align: center;
+}
+
+main li {
+  margin: 5px;
+}
+
+footer {
+  margin-top: 14.8em;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.main {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.head {
+  text-align: center;
+  width: 5em;
+}
+
+.nav {
+  margin-left: 16px;
+  font-size: 14px;
+}
+
+.day {
+  text-align: center;
+  width: 17em;
+  margin-top: 0;
+  margin-left: 10px;
+  font-size: 12px;
+}
