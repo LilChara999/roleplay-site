@@ -10,7 +10,21 @@ var usersRouter = require('./routes/users');
 var dashboardRouter = require('./routes/dashboard');
 var diaryRouter = require('./routes/diary');
 var profileRouter = require('./routes/profile');
+var formsRouter = require('./routes/forms');
 var coplayersRouter = require('./routes/coplayers');
+var coplayers_postsRouter = require('./routes/coplayers_posts');
+var friendsRouter = require('./routes/friends');
+var friends_postsRouter = require('./routes/friends_posts');
+var discussionsRouter = require('./routes/discussions');
+var private_messagesRouter = require('./routes/private_messages');
+var players_ratingRouter = require('./routes/players_rating');
+var my_roleplaysRouter = require('./routes/my_roleplays');
+var my_ownRouter = require('./routes/my_own');
+var participate_roleplaysRouter = require('./routes/participate_roleplays');
+var roleplays_listRouter = require('./routes/roleplays_list');
+var roleplays_ratingRouter = require('./routes/roleplays_rating')
+var settingsRouter = require('./routes/settings');
+var exitRouter = require('./routes/exit');
 
 var app = express();
 
@@ -28,7 +42,22 @@ app.use('/', dashboardRouter);
 app.use('/dashboard', dashboardRouter);
 app.use('/diary', diaryRouter);
 app.use('/profile', profileRouter);
+app.use('/forms', formsRouter);
 app.use('/coplayers', coplayersRouter);
+app.use('/coplayers_posts', coplayers_postsRouter);
+app.use('/friends', friendsRouter);
+app.use('/friends_posts', friends_postsRouter);
+app.use('/discussions', discussionsRouter);
+app.use('/private_messages', private_messagesRouter);
+app.use('/players_rating', players_ratingRouter);
+app.use('/my_roleplays', my_roleplaysRouter);
+app.use('/my_own', my_ownRouter);
+app.use('/participate_roleplays', participate_roleplaysRouter);
+app.use('/roleplays_list', roleplays_listRouter);
+app.use('/roleplays_rating', roleplays_ratingRouter);
+app.use('/settings', settingsRouter);
+app.use('/exit', exitRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
