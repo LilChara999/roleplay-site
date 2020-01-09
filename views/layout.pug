@@ -7,6 +7,45 @@ html(lang="ru")
   body
     header
       block header
+
+    nav
+      h3 Навигация по сайту
+      ul
+        li(class="nav")
+          a(href="/dashboard") Главная
+        li(class="nav")
+          a(href="/profile") Мой профиль
+        li(class="nav")
+          a(href="/forms") Мои анкеты
+        li(class="nav")
+          a(href="/coplayers") Мои соигроки
+        li(class="nav")
+          a(href="/coplayers_posts") Лента соигроков
+        li(class="nav")
+          a(href="/friends") Мои друзья
+        li(class="nav")
+          a(href="/friends_posts") Лента друзей
+        li(class="nav")
+          a(href="/discussions") Дискуссии
+        li(class="nav")
+          a(href="/private_messages") Личные сообщения
+        li(class="nav")
+          a(href="/players_rating") Рейтинг игроков
+        li(class="nav")
+          a(href="/my_roleplays") Мои ролевые
+          ul
+            li(class="nav")
+              a(href="/my_own") Созданные мной
+            li(class="nav")
+              a(href="/participate_roleplays") Участвую в ролевых
+        li(class="nav")
+          a(href="/roleplays_list") Список ролевых
+        li(class="nav")
+          a(href="/roleplays_rating") Рейтинг ролевых
+        li(class="nav")
+          a(href="/settings") Настройки
+        li(class="nav") Выйти
+
     main
       block content
 

@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 var dashboardRouter = require('./routes/dashboard');
 var diaryRouter = require('./routes/diary');
 var profileRouter = require('./routes/profile');
+var coplayersRouter = require('./routes/coplayers');
 
 var app = express();
 
@@ -27,6 +28,7 @@ app.use('/', dashboardRouter);
 app.use('/dashboard', dashboardRouter);
 app.use('/diary', diaryRouter);
 app.use('/profile', profileRouter);
+app.use('/coplayers', coplayersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

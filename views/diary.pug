@@ -1,28 +1,13 @@
 extends layout
 
 block header
-  h1 (class="head") Днявка
-  p (class="day") Была создана
-    time (datetime="2019-12-05") 8 декабря 2019 года
-  nav
-    ul
-    h3 Навигация по сайту
-      li (class="nav")
-        a (href="dashboard.html") Вернуться на главную
-        li (class="nav")
-          a (href="/profile.html") Мой профиль
-      li (class="nav") Мои анкеты
-      li (class="nav") Мои соигроки
-      li (class="nav") Лента соигроков
-      li (class="nav") Мои ролевые
-      li (class="nav") Список ролевых
-      li (class="nav") Рейтинг ролевых
-      li (class="nav") Выйти
+  h1(class="head") Днявка
+  p(class="day") Была создана 8 декабря 2019 года
 
 block content
   h2 Это будет днявка
   p В днявке должны быть возможности:
-  ul (class="main")
+  ul(class="main")
     li добавлять записи;
     li скрывать свои записи;
     li комментировать записи.

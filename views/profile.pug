@@ -1,27 +1,13 @@
 extends layout
 
 block header
-  h1 (class="head") Профиль
-  p (class="day") Был создан
-    time (datetime="2020-01-08") 8 января 2020 года
-  nav
-    ul
-    h3 Навигация по сайту
-        a (href="dashboard.html") Вернуться на главную
-      li (class="nav")
-        a (href="diary.html") Мой дневник
-      li (class="nav") Мои анкеты
-      li (class="nav") Мои соигроки
-      li (class="nav") Лента соигроков
-      li (class="nav") Мои ролевые
-      li (class="nav") Список ролевых
-      li (class="nav") Рейтинг ролевых
-      li (class="nav") Выйти
+  h1(class="head") Профиль
+  p(class="day") Был создан 8 января 2020 года
 
 block content
   h2 Это профиль игрока
   p В профиле будет содержаться:
-  ul (class="main")
+  ul(class="main")
     li личная информация вроде даты рождения, города, и т.д., и т.п;
     li список друзей;
     li список ролевых;

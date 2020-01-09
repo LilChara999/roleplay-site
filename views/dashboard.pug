@@ -1,30 +1,15 @@
 extends layout
 
 block header
-  h1 (class="head") Главная страница сайта
-  p (class="day") Была создана
-    time (datetime="2019-12-05") 5 декабря 2019 года
-  nav
-    ul
-    h3 Навигация по сайту
-      li (class="nav")
-        a (href="profile") Мой профиль
-      li (class="nav")
-        a (href="diary") Мой дневник
-      li (class="nav") Мои анкеты
-      li (class="nav") Мои соигроки
-      li (class="nav") Лента соигроков
-      li (class="nav") Мои ролевые
-      li (class="nav") Список ролевых
-      li (class="nav") Рейтинг ролевых
-      li (class="nav") Выйти
+  h1(class="head") Главная страница сайта
+  p(class="day") Была создана 5 декабря 2019 года
 
 block content
   h2 Сайт с днявками и ролёвками
   p Должен содержать как минимум:
-  ul (class="main")
+  ul(class="main")
     li
-      a (href="diary") возможность вести днявку;
+      a(href="/diary") возможность вести днявку;
     li возможность комментировать днявку;
     li хороший конструктор дизайна;
     li удобные сообщества для ролевых;
