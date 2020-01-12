@@ -5,7 +5,6 @@ var cookieParser = require('cookie-parser');
 var morgan = require('morgan');
 var pug = require('pug');
 const bodyParser = require('body-parser');
-const expressHandlebars = require('express-handlebars');
 const flash = require('connect-flash');
 const session = require('express-session');
 const mongoose = require('mongoose');
@@ -39,10 +38,6 @@ var settingsRouter = require('./routes/settings');
 var exitRouter = require('./routes/exit');
 
 const app = express();
-
-app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', expressHandlebars({ defaultLayout: 'layout' }));
-app.set('view engine', 'handlebars');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
