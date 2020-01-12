@@ -1,10 +1,12 @@
-- var menu = [{url: '/dashboard', name: 'Главная'}, {url: '/profile', name: 'Профиль'}, {url: '/forms', name: 'Мои анкеты'}, {url: '/coplayers', name: 'Мои соигроки'}, {url: '/coplayers_posts', name: 'Лента соигроков'}, {url: '/friends', name: 'Мои друзья'}, {url: '/friends_posts', name: 'Лента друзей'}, {url: '/discussions', name: 'Дискуссии'}, {url: '/private_messages', name: 'Личные сообщения'}, {url: '/players_rating', name: 'Рейтинг игроков'}, {url: '/my_roleplays', name: 'Мои ролевые'}, {url: '/my_own', name: 'Созданные мной'}, {url: '/participate_roleplays', name: 'Участвую в ролевых'}, {url: '/roleplays_list', name: 'Список ролевых'}, {url: '/roleplays_rating', name: 'Рейтинг ролевых'}, {url: '/settings', name: 'Настройки'}, {url: '/exit', name: 'Выйти'}]
+- var real_menu = [{url: '/dashboard', name: 'Главная'}]
+- var future_menu = [{url: '/profile', name: 'Профиль'}, {url: '/profile', name: 'Профиль'}, {url: '/forms', name: 'Мои анкеты'}, {url: '/coplayers', name: 'Мои соигроки'}, {url: '/coplayers_posts', name: 'Лента соигроков'}, {url: '/friends', name: 'Мои друзья'}, {url: '/friends_posts', name: 'Лента друзей'}, {url: '/discussions', name: 'Дискуссии'}, {url: '/private_messages', name: 'Личные сообщения'}, {url: '/players_rating', name: 'Рейтинг игроков'}, {url: '/my_roleplays', name: 'Мои ролевые'}, {url: '/my_own', name: 'Созданные мной'}, {url: '/participate_roleplays', name: 'Участвую в ролевых'}, {url: '/roleplays_list', name: 'Список ролевых'}, {url: '/roleplays_rating', name: 'Рейтинг ролевых'}, {url: '/settings', name: 'Настройки'}, {url: '/exit', name: 'Выйти'}]
 
 <!DOCTYPE html>
 html(lang="ru")
   head
     meta(charset="UTF-8")
-    title= title
+    block title
+     title= title
     link(type="text/css" rel="stylesheet" href="/stylesheets/layout.css")
   body
     header.border
@@ -15,7 +17,7 @@ html(lang="ru")
       a(href=url)= name
     h3.ulnav Навигация по сайту
     ul
-      each i in menu
+      each i in real_menu
         li.nav
           +link(i.url, i.name)
 

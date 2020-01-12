@@ -4,6 +4,17 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var pug = require('pug');
+const bodyParser = require('body-parser');
+const expressHandlebars = require('express-handlebars');
+const flash = require('connect-flash');
+const session = require('express-session');
+const mongoose = require('mongoose');
+const passport = require('passport');
+
+require('./config/passport');
+
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost:27017/roleplay_site');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -26,7 +37,33 @@ var roleplays_ratingRouter = require('./routes/roleplays_rating')
 var settingsRouter = require('./routes/settings');
 var exitRouter = require('./routes/exit');
 
-var app = express();
+const app = express();
+app.use(morgan('dev'));
+
+app.set('views', path.join(__dirname, 'views'));
+app.engine('handlebars', expressHandlebars({ defaultLayout: 'layout' }));
+app.set('view engine', 'handlebars');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  cookie: { maxAge: 60000 },
+  secret: 'codeworkrsecret',
+  saveUninitialized: false,
+  resave: false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(flash());
+app.use((req, res, next) => {
+  res.locals.success_mesages = req.flash('success')
+  res.locals.error_messages = req.flash('error')
+  next()
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -57,7 +94,6 @@ app.use('/roleplays_list', roleplays_listRouter);
 app.use('/roleplays_rating', roleplays_ratingRouter);
 app.use('/settings', settingsRouter);
 app.use('/exit', exitRouter);
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
