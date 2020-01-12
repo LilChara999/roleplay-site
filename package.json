@@ -7,19 +7,24 @@
     "devstart": "nodemon ./bin/www"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body": "^5.1.0",
     "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "express-handlebars": "^3.1.0",
+    "express-messages": "^1.0.1",
     "express-session": "^1.17.0",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+    "joi": "^13.7.0",
     "mongoose": "^5.8.7",
     "morgan": "~1.9.1",
     "parser": "^0.1.4",
     "passport": "^0.4.1",
-    "pug": "^2.0.4"
+    "passport-local": "^1.0.0",
+    "pug": "^2.0.4",
+    "vue": "^2.6.11"
   }
 }

@@ -2,7 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+var morgan = require('morgan');
 var pug = require('pug');
 const bodyParser = require('body-parser');
 const expressHandlebars = require('express-handlebars');
@@ -10,8 +10,9 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const mongoose = require('mongoose');
 const passport = require('passport');
+const vue = require('vue');
 
-require('./config/passport');
+// require('./config/passport');
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/roleplay_site');
@@ -38,7 +39,6 @@ var settingsRouter = require('./routes/settings');
 var exitRouter = require('./routes/exit');
 
 const app = express();
-app.use(morgan('dev'));
 
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', expressHandlebars({ defaultLayout: 'layout' }));
@@ -69,7 +69,7 @@ app.use((req, res, next) => {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-app.use(logger('dev'));
+app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
