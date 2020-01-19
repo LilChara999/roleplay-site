@@ -10,8 +10,19 @@ const session = require('express-session');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const vue = require('vue');
+const compiler = require('vue-template-compiler');
 
 // require('./config/passport');
+
+require.extensions['.vue'] = (module, filename) => {
+    let file = fs.readFileSync(filename, 'utf8');
+    let {script, template} = compiler.parseComponent(file);
+    let {render, staticRenderFns} = compiler.compile(template.content);
+    let result = `(function(){'use strict';${script.content}})();Object.assign(module.exports,{render:function(){${render}},staticRenderFns:[${staticRenderFns.map(code => {
+        return `function(){${code}}`;
+    }).join(',')}]});`;
+     module._compile(result, filename);
+};
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/roleplay_site');
@@ -19,6 +30,7 @@ mongoose.connect('mongodb://localhost:27017/roleplay_site');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var dashboardRouter = require('./routes/dashboard');
+var sign_inRouter = require('./routes/sign_in');
 var diaryRouter = require('./routes/diary');
 var profileRouter = require('./routes/profile');
 var formsRouter = require('./routes/forms');
@@ -71,6 +83,7 @@ app.use(cookieParser());
 app.use(express.static('public'));
 
 app.use('/', dashboardRouter);
+app.use('/sign_in', sign_inRouter);
 app.use('/dashboard', dashboardRouter);
 app.use('/diary', diaryRouter);
 app.use('/profile', profileRouter);
