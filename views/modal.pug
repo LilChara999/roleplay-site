@@ -28,6 +28,6 @@ html(lang="ru")
 
     div(id="app")
       input(type="button" id="show-modal" value="Show modal" "v-on:click"="showModal=true")
-      modal("v-if"="showModal=false")
+      modal("v-if"="showModal" "v-on:close"="showModal=false")
 
     script(src='/javascripts/modal.js')
