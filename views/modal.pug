@@ -1,0 +1,31 @@
+<!doctype html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    script(type="text/x-template" href='/public/javascripts/modal.js')
+    link(type="text/css" rel="stylesheet" href="/stylesheets/modal_window.css")
+
+  body
+    script(type="text/x-template" id="modal-template")
+      transition(name="modal")
+        div(class="modal-mask")
+          div(class="modal-wrapper")
+            div(class="modal-container")
+
+              div(class="modal-header")
+                slot(name="header")
+                  p default header
+
+              div(class="modal-body")
+                slot(name="body")
+                  p default body
+
+              div(class="modal-footer")
+                slot(name="footer")
+                  p default footer
+                  input(type="button" value="OK" class="modal-default-button" onclick="$emit('close')")
+
+
+    div(id="app")
+      input(type="button" id="show-modal" value="Show modal" "v-on:click"="showModal=true")
+      modal("v-if"="showModal=false")

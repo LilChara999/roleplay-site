@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    block title
+     title= title
+    link(type="text/css" rel="stylesheet" href="/stylesheets/layout.css")
+
+  body
+    form(action="/log_in" method="post")
+      br
+      br
+      label(for="login") Логин
+      input(type="text" name="login_field" id="login")
+      br
+      br
+      label(for="password") Пароль
+      input(type="password" name="password_field" id="password")
+      br
+      br
+      input(type="submit" value="Войти")
+    br
+    br
+    a(href="/register") Зарегистрироваться
+    br
+    br
+    a(href="/forget_password") Забыли пароль?
