@@ -17,8 +17,7 @@ html(lang="ru")
       a(href=url)= name
     h3.ulnav Навигация по сайту
     ul
-      li.nav
-        a(href='/sign_in') Войти
+      include ./sign_in.pug
       each i in real_menu
         li.nav
           +link(i.url, i.name)
