@@ -29,7 +29,6 @@ mongoose.connect('mongodb://localhost:27017/roleplay_site');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var sign_inRouter = require('./routes/sign_in');
 var dashboardRouter = require('./routes/dashboard');
 var modalRouter = require('./routes/modal');
 var diaryRouter = require('./routes/diary');
@@ -84,7 +83,6 @@ app.use(cookieParser());
 app.use(express.static('public'));
 
 app.use('/', dashboardRouter);
-app.use('/sign_in', sign_inRouter);
 app.use('/modal', modalRouter);
 app.use('/dashboard', dashboardRouter);
 app.use('/diary', diaryRouter);
