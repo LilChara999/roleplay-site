@@ -1,3 +1,32 @@
+a {
+  font-size: 14px;
+  font-style: normal;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+a:hover {
+  color: #ff0000;
+}
+
+/*a:visited {
+  color: #5D8F9B;
+}*/
+
+li {
+  margin-left: 0;
+  padding-left: 0;
+  position: right;
+  text-align: right;
+  font-size: 14px;
+  font-style: normal;
+  border-radius: 5px;
+  padding: 4px;
+  padding-right: 0;
+  list-style: disc;
+  list-style-position: inside;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -37,17 +66,21 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 
-.modal-header h3 {
+.modal-header {
   margin-top: 0;
-  color: #8AD5E7;
+  text-align: center;
+
 }
 
 .modal-body {
-  margin: 20px 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .modal-default-button {
   float: right;
+  margin: 3px;
 }
 
 .modal-enter {
