@@ -6,18 +6,16 @@ html {
 body {
   text-align: center;
   font-family: "FF Din", sans-serif;
-  background-color: #A3DAE7;
   margin: 0 0 0 0;
 }
 
 header {
   margin: 20px;
   margin-bottom: 10px;
-  background-color: #60B9CE;
 }
 
 h1 {
-  margin-bottom: 0;
+  margin: 0;
   font-style: oblique;
   padding: 10px;
 }
@@ -33,7 +31,6 @@ h3 {
 }
 
 nav {
-  background-color: #60B9CE;
   position: right;
   text-align: right;
   float: right;
@@ -51,22 +48,17 @@ li {
 }
 
 nav ul {
-  margin-right: 10px;
   padding: 0;
 }
 
 main {
   position: relative;
-  /*text-align: left;*/
   min-height: 100%;
   height: 430px;
   margin-left: 20px;
   margin-right: 270px;
   padding: 10px;
-  /*padding-left: 350px;*/
-  background-color: #60B9CE;
   margin-bottom: 4%;
-  /*display: flex;*/
   align-items: center;
 }
 
@@ -102,25 +94,25 @@ footer {
   padding: 4px;
 }
 
-a:visited {
-  color: #5D8F9B;
+a:hover {
+  /*color: #FFD8B2;*/
 }
 
-a:hover {
-  color: #FFD8B2;
-}
+/*a:visited {
+  color: #5D8F9B;
+}*/
 
 nav li:hover {
   font-weight: bold;
-  background-color: #1F7286;
+  /*background-color: #1F7286;*/
   border-radius: 5px;
 }
 
-.border {
+/*.border {
   border: 1px;
   border-style: solid;
   border-color: #5D8F9B;
-}
+}*/
 
 .ulnav {
   padding-top: 10px;
