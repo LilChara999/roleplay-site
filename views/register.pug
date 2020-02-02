@@ -1,19 +1,43 @@
-<form class="form-signin" action="/users/register" method="POST">
-  <h2 class="form-signin-heading">Please sign up</h2>
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    block title
+     title= title
+    link(type="text/css" rel="stylesheet" href="/stylesheets/layout.css")
+  body
+    header.border
+      h1 Регистрация на сайте
 
-  <label for="inputEmail" class="sr-only">Email address</label>
-  <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>
+    main.border
+      form(action="/register_user" method="post")
+        br
+        br
+        label(for="email") Введите e-mail
+        |
+        |
+        input(type="email" name="email_field" id="email")
+        br
+        br
+        label(for="login") Введите логин
+        |
+        |
+        input(type="text" name="login_field" id="login")
+        br
+        br
+        label(for="password") Введите пароль
+        |
+        |
+        input(type="password" name="password_field" id="password")
+        br
+        br
+        label(for="password") Введите пароль ещё раз
+        |
+        |
+        input(type="password" name="password_field" id="confirm_password")
+        br
+        br
+        input(type="submit" value="Зарегистрироваться")
 
-  <label for="inputUsername" class="sr-only">Username</label>
-  <input type="text" id="inputUsername" name="username" class="form-control" placeholder="Username" required>
-
-  <label for="inputPassword" class="sr-only">Password</label>
-  <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
-
-  <label for="inputConfirmPassword" class="sr-only">Confirm Password</label>
-  <input type="password" id="inputConfirmPassword" name="confirmationPassword" class="form-control" placeholder="Confirm Password" required>
-
-  <br/>
-
-  <button class="btn btn-lg btn-default btn-block" type="submit">Sign up</button>
-</form>
+    footer.border
+      p © LilChara 2020
