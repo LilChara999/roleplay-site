@@ -1,119 +1,89 @@
-html {
-  position: relative;
-  min-height: 100%;
-}
-
+html,
 body {
-  text-align: center;
   font-family: "FF Din", sans-serif;
-  margin: 0 0 0 0;
+  height: 100%;
 }
 
 header {
-  margin: 20px;
-  margin-bottom: 10px;
+  background-color: #0ff;
+  width: 100%;
+  display: table-row;
+}
+
+main {
+  padding: 10px;
+  background-color: #0dd;
+  display: table-row;
+  width: 100%;
+  height: 100%;
+}
+
+.content,
+.nav_block {
+  display: table-cell;
+  height: 100%;
 }
 
 h1 {
   margin: 0;
-  font-style: oblique;
   padding: 10px;
 }
 
-h2, .text {
-  text-align: center;
+h2 {
+  margin: 0 5px;
+  background-color: #0bb;
 }
 
 h3 {
   font-size: 20px;
   margin: 0;
   padding: 0;
+  text-align: right;
 }
 
 nav {
-  position: right;
-  text-align: right;
-  float: right;
-  list-style-position: inside;
-  margin-right: 20px;
-  padding: 20px;
-  padding-top: 20px;
-  height: 410px;
-}
-
-li {
-  margin-top: 5px;
-  margin-right: 60px;
-  width: 100%;
-}
-
-nav ul {
-  padding: 0;
-}
-
-main {
-  position: relative;
-  min-height: 100%;
-  height: 430px;
-  margin-left: 20px;
-  margin-right: 270px;
-  padding: 10px;
-  margin-bottom: 4%;
-  align-items: center;
-}
-
-main li {
-  margin: 5px;
+  margin: 0;
+  padding-right: 10px;
+  background-color: #099;
 }
 
 footer {
   text-align: left;
-  padding: 0;
   font-size: 14px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  margin-left: 20px;
-  margin-bottom: 10px;
-  margin-right: 20px;
-  padding-left: 5px;
-  width: 97%;
+  background-color: #077;
+  display: table-row;
+  width: 100%;
 }
 
-.main {
-  margin-left: 0;
-  padding-left: 0;
-  list-style: disc;
-  list-style-position: inside;
+.table {
+  display: table;
+  height: 100%;
+  width: 100%;
+  background-color: #001;
+  border-spacing: 0;
+  margin: 0;
 }
 
 .nav {
+  margin-left: 0;
+  padding-left: 0;
+  position: right;
+  text-align: right;
   font-size: 14px;
   font-style: normal;
   border-radius: 5px;
   padding: 4px;
+  padding-right: 0;
+  list-style: disc;
+  list-style-position: inside;
 }
 
-a:hover {
-  /*color: #FFD8B2;*/
+.nav_block {
+  width: 230px;
 }
 
-/*a:visited {
-  color: #5D8F9B;
-}*/
-
-nav li:hover {
-  font-weight: bold;
-  /*background-color: #1F7286;*/
-  border-radius: 5px;
-}
-
-/*.border {
-  border: 1px;
-  border-style: solid;
-  border-color: #5D8F9B;
-}*/
-
-.ulnav {
-  padding-top: 10px;
+.inner_table {
+  display: table;
+  width: 100%;
+  border-spacing: 10px;
 }
