@@ -8,27 +8,23 @@ html(lang="ru")
     block title
      title= title
     link(type="text/css" rel="stylesheet" href="/stylesheets/layout.css")
-    
+
   body
-    div.table
+    header
+      block header
 
-      header
-        block header
+    main
+      block content
 
-      main
-        div.inner_table
-          div.content
-            block content
+      nav.nav_block
+        mixin link(url, name)
+          a(href=url)= name
+        h3 Навигация по сайту
+          ul
+            include ./sign_in.pug
+            each i in real_menu
+              li.nav
+                +link(i.url, i.name)
 
-          nav.nav_block
-            mixin link(url, name)
-              a(href=url)= name
-            h3 Навигация по сайту
-              ul
-                include ./sign_in.pug
-                each i in real_menu
-                  li.nav
-                    +link(i.url, i.name)
-
-      footer
-        p © LilChara 2020
+    footer
+      p © LilChara 2020
