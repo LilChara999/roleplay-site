@@ -41,6 +41,9 @@ nav {
   margin: 0;
   padding-right: 10px;
   background-color: #099;
+  float: right;
+  clear: right;
+  width: 230px;
 }
 
 footer {
@@ -64,13 +67,6 @@ footer {
   list-style-position: inside;
 }
 
-.nav_block {
-  width: 230px;
-  display: block;
-  float: right;
-}
 .content {
-  height: 100%;
   display: block;
-  float: left;
 }
