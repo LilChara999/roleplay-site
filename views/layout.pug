@@ -13,10 +13,9 @@ html(lang="ru")
     header
       block header
 
-    main
-      block content
+    main.content
 
-      nav.nav_block
+      nav
         mixin link(url, name)
           a(href=url)= name
         h3 Навигация по сайту
@@ -26,5 +25,7 @@ html(lang="ru")
               li.nav
                 +link(i.url, i.name)
 
+      block content
+      
     footer
       p © LilChara 2020
