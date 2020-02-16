@@ -39,10 +39,8 @@ html(lang="ru")
                   a(href="/forgot_password") Забыли пароль?
 
 
-    div(id="app")
-      ul
-        li
-          a.main(href="#sign_in" id="show-modal" "v-on:click"="showModal=true") Войти
+    div.menu_link(id="app")
+      a(href="#sign_in" id="show-modal" "v-on:click"="showModal=true") Войти
       modal("v-if"="showModal" "v-on:close"="showModal=false")
 
 
