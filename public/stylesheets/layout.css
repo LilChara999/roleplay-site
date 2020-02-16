@@ -139,7 +139,7 @@ footer {
   padding: 0;
   margin-left: 5px;
   flex-direction: row;
-  height: 100%;
+  height: auto;
   align-items: stretch;
 }
 
@@ -169,7 +169,7 @@ footer {
 .text {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto;
 }
 
 .comments {
