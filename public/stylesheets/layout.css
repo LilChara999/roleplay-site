@@ -10,14 +10,14 @@ body {
 
 header {
   margin: 0;
-  background-color: #0ff;
   display: flex;
+  width: 100%;
 }
 
 main {
+  display: flex;
   padding: 10px;
-  background-color: #0dd;
-  height: 100%;
+  width: auto;
 }
 
 h1 {
@@ -25,48 +25,183 @@ h1 {
   padding: 10px;
 }
 
+h1 a {
+  font-size: 30px;
+  text-decoration: none;
+}
+
+h1 a:hover {
+  color: #000;
+}
+
+h1 a:visited {
+  color: #000;
+}
+
 h2 {
-  margin: 0 5px;
-  background-color: #0bb;
+  padding: 0;
+  padding-left: 5px;
+  margin: 0;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 24px;
   margin: 0;
   padding: 0;
+  margin-bottom: 10px;
   text-align: right;
 }
 
-nav {
+p {
+  padding: 0;
   margin: 0;
-  padding-right: 10px;
-  background-color: #099;
-  float: right;
-  clear: right;
-  width: 230px;
+}
+
+a {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 3px;
 }
 
 footer {
   text-align: left;
   font-size: 14px;
-  background-color: #077;
   display: flex;
+  padding: 5px;
+  width: auto;
+  align-items: flex-end;
 }
 
-.nav {
-  margin-left: 0;
-  padding: 4px;
-  padding-right: 0;
-  padding-left: 0;
-  position: right;
-  text-align: right;
-  font-size: 14px;
-  font-style: normal;
-  border-radius: 5px;
-  list-style: disc;
-  list-style-position: inside;
+.main_content {
+  display: flex;
+  margin: 0;
+  height: 100%;
 }
 
 .content {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.post {
+  padding: 0;
+  margin: 10px 0;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.post_title {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+.post_name,
+.nickname,
+.date_and_time {
+  padding: 0;
+  margin-right: 5px;
+}
+
+.date_and_time {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin: 5px;
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+.gray {
+  color: #aaa;
+  font-size: 11px;
+}
+
+.date_and_time .h3 {
+  margin-right: 5px;
+}
+
+.date_and_time .gray {
+  font-size: 18px;
+}
+
+.post_content {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-left: 5px;
+  flex-direction: row;
+  height: 100%;
+  align-items: stretch;
+}
+
+.user_avatar {
+  padding: 0;
+}
+
+.user_avatar a {
+  margin: 0;
+  padding: 0;
+}
+
+.user_avatar img {
+  margin-right: 10px;
+  padding: 0;
+}
+
+.text_and_comments {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  margin-right: 10px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.comments {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.comments a {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu_link {
+  display: inline-flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+.menu_link a {
+  margin: 5px 0;
+  padding: 0;
 }
