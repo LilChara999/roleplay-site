@@ -1,5 +1,5 @@
-- var real_menu = [{url: '/dashboard', name: 'Главная'}]
-- var future_menu = [{url: '/profile', name: 'Профиль'}, {url: '/profile', name: 'Профиль'}, {url: '/forms', name: 'Мои анкеты'}, {url: '/coplayers', name: 'Мои соигроки'}, {url: '/coplayers_posts', name: 'Лента соигроков'}, {url: '/friends', name: 'Мои друзья'}, {url: '/friends_posts', name: 'Лента друзей'}, {url: '/discussions', name: 'Дискуссии'}, {url: '/private_messages', name: 'Личные сообщения'}, {url: '/players_rating', name: 'Рейтинг игроков'}, {url: '/my_roleplays', name: 'Мои ролевые'}, {url: '/my_own', name: 'Созданные мной'}, {url: '/participate_roleplays', name: 'Участвую в ролевых'}, {url: '/roleplays_list', name: 'Список ролевых'}, {url: '/roleplays_rating', name: 'Рейтинг ролевых'}, {url: '/settings', name: 'Настройки'}, {url: '/exit', name: 'Выйти'}]
+- var real_menu = [{url: '/register', name: 'Регистрация'}]
+- var future_menu = [{url: '/profile', name: 'Профиль'}, {url: '/forms', name: 'Мои анкеты'}, {url: '/coplayers', name: 'Мои соигроки'}, {url: '/coplayers_posts', name: 'Лента соигроков'}, {url: '/friends', name: 'Мои друзья'}, {url: '/friends_posts', name: 'Лента друзей'}, {url: '/discussions', name: 'Дискуссии'}, {url: '/private_messages', name: 'Личные сообщения'}, {url: '/players_rating', name: 'Рейтинг игроков'}, {url: '/my_roleplays', name: 'Мои ролевые'}, {url: '/my_own', name: 'Созданные мной'}, {url: '/participate_roleplays', name: 'Участвую в ролевых'}, {url: '/roleplays_list', name: 'Список ролевых'}, {url: '/roleplays_rating', name: 'Рейтинг ролевых'}, {url: '/settings', name: 'Настройки'}, {url: '/exit', name: 'Выйти'}]
 
 <!DOCTYPE html>
 html(lang="ru")
@@ -13,19 +13,18 @@ html(lang="ru")
     header
       block header
 
-    main.content
-
-      nav
-        mixin link(url, name)
-          a(href=url)= name
-        h3 Навигация по сайту
-          ul
-            include ./sign_in.pug
-            each i in real_menu
-              li.nav
-                +link(i.url, i.name)
+    main.main_content
 
       block content
-      
+
+      div.nav
+        mixin link(url, name)
+          a(href=url)= name
+        h3 Навигация
+        include ./sign_in.pug
+        each i in real_menu
+          div.menu_link
+            +link(i.url, i.name)
+
     footer
-      p © LilChara 2020
+      p.gray © LilChara 2020
