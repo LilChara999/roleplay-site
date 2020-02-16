@@ -4,8 +4,67 @@ block title
   title Главная
 
 block header
-  h1 Your Roleplays
+  h1
+    a(href="/") Your Roleplays
 
 block content
-  div.content
-    h2 Добро пожаловать на Your Roleplays! Добро пожаловать на Your Roleplays! Добро пожаловать на Your Roleplays! Добро пожаловать на Your Roleplays! Добро пожаловать на Your Roleplays! Добро пожаловать на Your Roleplays! Добро пожаловать на Your Roleplays! Добро пожаловать на Your Roleplays! Добро пожаловать на Your Roleplays! Добро пожаловать на Your Roleplays! Добро пожаловать на Your Roleplays! Добро пожаловать на Your Roleplays! Добро пожаловать на Your Roleplays! Добро пожаловать на Your Roleplays! 
+
+    div.content
+
+      div.date_and_time
+       p.h3 Сегодня
+       p.gray - 16 февраля 2020 года
+      div.post
+        div.post_title
+          a.post_name(href="/dashboard")
+            h2 Постик номер три
+          a.nickname(href="/dashboard")
+            p Здесь ещё один юзер
+          p.gray 16 февраля 2020 года, 19:41:43 +2GTM
+      div.post_content
+        div.user_avatar
+          a(href="/register")
+            img(src="images/52.png")
+        div.text_and_comments
+          div.text
+            p А здесь у чувака такая же авка, как у предыдущего! Совпадение? Или плагиат?? А может быть, моя лень??? Да, скорее всего, моя лень.
+          div.comments
+            a(href="/dashboard") Комментировать
+
+      div.post
+        div.post_title
+          a.post_name(href="/dashboard")
+            h2 Постик номер два
+          a.nickname(href="/dashboard")
+            p Здесь какой-то другой юзер
+          p.gray 16 февраля 2020 года, 14:58:23 +2GTM
+        div.post_content
+          div.user_avatar
+            a(href="/register")
+              img(src="images/52.png")
+          div.text_and_comments
+            div.text
+              p Это тоже дофига нужная запись, правда, зачем она - я вам не скажу.
+            div.comments
+              a(href="/dashboard") Комментировать
+
+      div.date_and_time
+        p.h3 Вчера
+        p.gray - 15 февраля 2020 года
+      div.post
+        div.post_title
+          a.post_name(href="/dashboard")
+            h2 Постик номер раз
+          a.nickname(href="/dashboard")
+            p Здесь какой-то юзер
+          p.gray 15 февраля 2020 года, 20:40:00 +2GTM
+        div.post_content
+          div.user_avatar
+            a(href="/register")
+              img(src="images/Chara.png")
+          div.text_and_comments
+            div.text
+              p Здесь обязательно будет какой-то дофига умный текст. Возможно, в нём даже будет смысл. Возможно. Это очень даже неточно.
+              p Вообще, в этом тексте есть смысл, так как это тестовая запись, которая показывает, насколько всё плохо.
+            div.comments
+              a(href="/dashboard") Комментировать
