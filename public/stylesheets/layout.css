@@ -3,26 +3,14 @@ body {
   font-family: "FF Din", sans-serif;
   height: 100%;
   width: 100%;
-  margin: auto;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
 }
 
-header {
-  margin: 0;
-  display: flex;
-  width: 100%;
-}
-
-main {
-  display: flex;
-  padding: 10px;
-  width: auto;
-}
-
 h1 {
   margin: 0;
-  padding: 10px;
 }
 
 h1 a {
@@ -38,61 +26,42 @@ h1 a:visited {
   color: #000;
 }
 
-h2 {
-  padding: 0;
-  padding-left: 5px;
-  margin: 0;
-}
-
-h3 {
-  font-size: 24px;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 10px;
-  text-align: right;
-}
-
 p {
-  padding: 0;
   margin: 0;
 }
 
 a {
-  padding: 0;
-  margin: 0;
   display: flex;
-}
-
-label {
-  display: inline-block;
-  margin-bottom: 3px;
-}
-
-footer {
-  text-align: left;
-  font-size: 14px;
-  display: flex;
-  padding: 5px;
-  width: auto;
-  align-items: flex-end;
 }
 
 .main_content {
   display: flex;
-  margin: 0;
-  height: 100%;
+  height: auto; /*растянуть элемент на всю длину контента*/
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1; /*приказать элементу занять всё свободное место*/
+}
+
+.header {
+  display: flex;
+  width: 100%;
+}
+
+.page_content {
+  display: flex;
+  width: auto;
+  flex-grow: 1;
+  padding-left: 10px; /*чтоб содержимое страницы не прилипало к краю страницы*/
 }
 
 .content {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
 }
 
 .post {
-  padding: 0;
-  margin: 10px 0;
-  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -101,60 +70,35 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  margin: 0;
-  padding: 0;
-}
-
-.post_name,
-.nickname,
-.date_and_time {
-  padding: 0;
-  margin-right: 5px;
 }
 
 .date_and_time {
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  margin: 5px;
-  margin-bottom: 15px;
   font-size: 26px;
+  margin-top: 20px;
 }
 .gray {
   color: #aaa;
   font-size: 11px;
 }
 
-.date_and_time .h3 {
-  margin-right: 5px;
-}
-
 .date_and_time .gray {
   font-size: 18px;
+  margin-left: 5px;
 }
 
 .post_content {
   display: flex;
-  margin: 0;
-  padding: 0;
-  margin-left: 5px;
   flex-direction: row;
-  height: auto;
+  height: 100%;
   align-items: stretch;
 }
 
-.user_avatar {
-  padding: 0;
-}
-
 .user_avatar a {
-  margin: 0;
   padding: 0;
-}
-
-.user_avatar img {
-  margin-right: 10px;
-  padding: 0;
+  padding-right: 5px;
 }
 
 .text_and_comments {
@@ -162,14 +106,13 @@ footer {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 10px;
-  margin-right: 10px;
+  flex-grow: 1;
 }
 
 .text {
   display: flex;
   flex-direction: column;
-  height: auto;
+  height: 100%;
 }
 
 .comments {
@@ -179,29 +122,56 @@ footer {
 }
 
 .comments a {
-  margin: 0;
-  padding: 0;
   display: inline-flex;
   justify-content: flex-end;
   align-content: flex-end;
 }
 
 .nav {
-  margin: 0;
-  padding: 0;
-  padding-right: 10px;
   display: flex;
   flex-direction: column;
+  margin-right: 15px;
+  padding: 0;
+}
+
+.menu_title {
+  font-size: 24px;
+  text-align: right;
+  margin: 5px 0;
+  padding: 0;
 }
 
 .menu_link {
   display: inline-flex;
   justify-content: flex-end;
-  margin: 0;
-  padding: 0;
+  width: 100%;
 }
 
 .menu_link a {
-  margin: 5px 0;
   padding: 0;
+  padding-top: 5px;
+}
+
+.footer {
+  text-align: left;
+  font-size: 14px;
+  display: flex;
+  width: auto;
+  padding: 40px 0 20px 10px; /*большое расстояние сверху*/
+}
+
+/*для формы регистрации*/
+
+label {
+  display: inline-block;
+  padding: 5px 0;
+}
+
+.form_content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  padding-left: 20px;
 }
