@@ -1,85 +1,62 @@
-- var date = [{number: "1"}, {number: "2"}, {number: "3"}, {number: "4"}, {number: "5"}, {number: "6"}, {number: "7"}, {number: "8"}, {number: "9"}, {number: "10"}, {number: "11"}, {number: "12"}, {number: "13"}, {number: "14"}, {number: "15"}, {number: "16"}, {number: "17"}, {number: "18"}, {number: "19"}, {number: "20"}, {number: "21"}, {number: "22"}, {number: "23"}, {number: "24"}, {number: "25"}, {number: "26"}, {number: "27"}, {number: "28"}, {number: "29"}, {number: "30"}, {number: "31"}]
-- var mounth = [{name: "Январь"}, {name: "Февраль"}, {name: "Март"}, {name: "Апрель"}, {name: "Май"}, {name: "Июнь"}, {name: "Июль"}, {name: "Август"}, {name: "Сентябрь"}, {name: "Октябрь"}, {name: "Ноябрь"}, {name: "Декабрь"}]
-- var year = [{number: "1970"}, {number: "1971"}, {number: "1972"}, {number: "1973"}, {number: "1974"}, {number: "1975"}, {number: "1976"}, {number: "1977"}, {number: "1978"}, {number: "1979"},  {number: "1980"}, {number: "1981"}, {number: "1982"}, {number: "1983"}, {number: "1984"}, {number: "1985"}, {number: "1986"}, {number: "1987"}, {number: "1988"}, {number: "1989"}, {number: "1990"}, {number: "1991"}, {number: "1992"}, {number: "1993"}, {number: "1994"}, {number: "1995"}, {number: "1996"}, {number: "1997"}, {number: "1998"}, {number: "1999"}, {number: "2000"}, {number: "2001"}, {number: "2002"}]
-- var real_menu = [{url: '/register', name: 'Регистрация'}]
+extends layout
 
-<!DOCTYPE html>
-html(lang="ru")
-  head
-    meta(charset="UTF-8")
-    block title
-     title= title
-    link(type="text/css" rel="stylesheet" href="/stylesheets/layout.css")
-  body
-    header
-      h1
-        a(href="/") Your Roleplays
+block title
+  title Регистрация
 
-    main.content
+block content
 
-      nav
-        mixin link(url, name)
-          a(href=url)= name
-        h3 Навигация по сайту
-          ul
-            include ./sign_in.pug
-            each i in real_menu
-              li.nav
-                +link(i.url, i.name)
+  div.form_content
 
-      form(action="/register_user" method="post")
-        label(for="email") Введите e-mail
-        br
-        input(type="email" name="email_field" id="email")
-        br
-        br
-        label(for="login") Введите логин
-        br
-        input(type="text" name="login_field" id="login")
-        br
-        br
-        label(for="password") Введите пароль
-        br
-        input(type="password" name="password_field" id="password")
-        br
-        br
-        label(for="password") Введите пароль ещё раз
-        br
-        input(type="password" name="password_field" id="confirm_password")
-        br
-        br
-        label(for="date_of_birth") Дата рождения
-        br
-        mixin date(number)
-          option.date= number
-        select
-          each i in date
-            +date(i.number)
-        |
-        mixin mounth(name)
-          option.mounth= name
-        select
-          each i in mounth
-            +mounth(i.name)
-        |
-        mixin year(number)
-          option.year= number
-        select
-          each i in year
-            +year(i.number)
-        br
-        br
-        label(for="nickname") Никнейм
-        br
-        input(type="text" name="nickname_field" id="nickname")
-        br
-        br
-        label(for="name_of_diary") Название дневника
-        br
-        input(type="text" name="name_of_diary_field" id="name_of_diary")
-        br
-        br
-        input(type="submit" value="Зарегистрироваться")
-
-    footer
-      p © LilChara 2020
+    form(action="/register_user" method="post")
+      label(for="email") Введите e-mail
+      br
+      input(type="email" name="email_field" id="email")
+      br
+      br
+      label(for="login") Введите логин
+      br
+      input(type="text" name="login_field" id="login")
+      br
+      br
+      label(for="password") Введите пароль
+      br
+      input(type="password" name="password_field" id="password")
+      br
+      br
+      label(for="password") Введите пароль ещё раз
+      br
+      input(type="password" name="password_field" id="confirm_password")
+      br
+      br
+      label(for="date_of_birth") Дата рождения
+      br
+      mixin date(number)
+        option.date= number
+      select
+        each i in date
+          +date(i.number)
+      |
+      mixin mounth(name)
+        option.mounth= name
+      select
+        each i in mounth
+          +mounth(i.name)
+      |
+      mixin year(number)
+        option.year= number
+      select
+        each i in year
+          +year(i.number)
+      br
+      br
+      label(for="nickname") Никнейм
+      br
+      input(type="text" name="nickname_field" id="nickname")
+      br
+      br
+      label(for="name_of_diary") Название дневника
+      br
+      input(type="text" name="name_of_diary_field" id="name_of_diary")
+      br
+      br
+      input(type="submit" value="Зарегистрироваться")
