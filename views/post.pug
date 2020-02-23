@@ -1,0 +1,44 @@
+extends layout
+block header
+  h1
+    a(href="/diary") Мой днеффник
+
+block content
+
+  div.content
+
+    div.post
+      div.post_title
+        a.post_name(href="/dashboard")
+          h2 Постик номер раз
+        a.nickname(href="/dashboard")
+          p Никто
+        p.gray 15 февраля 2020 года, 20:40:00 +2GTM
+      div.post_content
+        div.user_avatar
+          a(href="/register")
+            img(src="images/Chara.png")
+        div.text_and_comments
+          div.text
+            p Да, здесь всё так же, как и на главной, потому что я ленивая жопа.
+
+    div.comments_in_post
+      h2 Комментарии
+
+      div.post_title
+        a.nickname(href="/dashboard")
+          p Здесь какой-то другой юзер
+        p.gray 23 февраля 2020 года, 14:42:15 +2GTM
+
+      div.post_content
+        div.user_avatar
+          a(href="/register")
+            img(src="images/52.png")
+        div.text_and_comments
+          div.text
+            p Аффтар, выпей йаду.
+          div.comments
+            a(href="/dashboard") Ответить
+
+      p.toolbar Здесь будет тулбар, как на старом беоше
+      textarea
