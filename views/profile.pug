@@ -1,16 +1,44 @@
 extends layout
 
-block header
-  h1(class="head") Профиль
-  p(class="day") Был создан 8 января 2020 года
+block title
+  title Профиль пользователя Никто
 
 block content
-  h2 Это профиль игрока
-  p В профиле будет содержаться:
-  ul(class="main")
-    li личная информация вроде даты рождения, города, и т.д., и т.п;
-    li список друзей;
-    li список ролевых;
-    li кол-во написанных постов;
-    li ачивки, полученные на сайте (не факт, но может быть);
-    li доп. инфа.
+
+  div.content
+
+    h1 Профиль юзера Никто
+
+    div.all_info
+
+      div.column
+        h2 Личная информация
+        img.profile_image(src="images/memas.jpg")
+        a.for_profile(href="/diary") Мой днеффник
+        p Дата рождения: 01 января 1990 года
+        p Город: Усть-Залупинск
+        a.for_profile(href="/dashboard") Написать сообщение
+        a.for_profile(href="/dashboard") Добавить в избранное
+        a.for_profile(href="/dashboard") Добавить в друзья
+        a.for_profile(href="/dashboard") Заблокировать
+
+      div.column
+        h2 Деятельность на сайте
+
+        p Мои друзья:
+        ul.for_profile
+          li
+            a.for_profile(href="/dashboard") Дед Пихто
+          li
+            a.for_profile(href="/dashboard") Баба с Пистолетовым
+
+        p Мои ролевые:
+        ul.for_profile
+          li
+            a.for_profile(href="/dashboard") Н-сити
+          li
+            a.for_profile(href="/dashboard") Н-сити 2
+          li
+            a.for_profile(href="/dashboard") Н-сити: Внуки тех самый, которые были первыми
+
+        p Кол-во написанных постов: 666
