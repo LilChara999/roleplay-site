@@ -9,20 +9,6 @@ a:hover {
   color: #ff0000;
 }
 
-li {
-  margin-left: 0;
-  padding-left: 0;
-  position: right;
-  text-align: right;
-  font-size: 14px;
-  font-style: normal;
-  border-radius: 5px;
-  padding: 4px;
-  padding-right: 0;
-  list-style: disc;
-  list-style-position: inside;
-}
-
 .modal {
   position: fixed;
   top: 0;
@@ -54,7 +40,7 @@ li {
 
 .modal-container {
   width: 300px;
-  height: 250px;
+  height: 180px;
   margin: 0px auto;
   padding: 20px 30px;
   background-color: #fff;
@@ -76,19 +62,16 @@ li {
   justify-content: center;
   display: flex;
   padding: 10px;
+  text-align: center;
+}
+
+.sign_in_form {
+  text-align: right;
+  padding: 5px;
 }
 
 .modal-footer {
   margin: auto;
-  text-align: center;
-  float: left;
-}
-
-
-.modal-default-button {
-  margin: 3px;
-  float: right;
-  margin: 10px;
 }
 
 .modal-enter {
@@ -107,4 +90,14 @@ li {
 
 .main a {
   margin: auto;
+}
+
+.left {
+  display: block;
+  float: left;
+}
+
+.right {
+  display: block;
+  float: right;
 }
