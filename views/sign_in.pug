@@ -18,25 +18,26 @@ html(lang="ru")
 
               div(class="modal-body")
                 slot(name="body")
-                form(action="/log_in" method="post")
-                  label(for="login") Логин
-                  |
-                  |
-                  input(type="text" name="login_field" id="login")
-                  br
-                  br
-                  label(for="password") Пароль
-                  |
-                  |
-                  input(type="password" name="password_field" id="password")
-                  br
-                  br
-                  input(type="submit" value="Войти")
+                div.sign_in_form
+                  form(action="/log_in" method="post")
+                    label(for="login") Логин
+                    |
+                    |
+                    input(type="text" name="login_field" id="login")
+                    br
+                    br
+                    label(for="password") Пароль
+                    |
+                    |
+                    input(type="password" name="password_field" id="password")
+                    br
+                    br
+                    input(type="submit" value="Войти")
 
               div(class="modal-footer")
                 slot(name="footer")
-                  a(href="/register") Зарегистрироваться
-                  a(href="/forgot_password") Забыли пароль?
+                  a.left(href="/register") Зарегистрироваться
+                  a.right(href="/forgot_password") Забыли пароль?
 
 
     div.menu_link(id="app")
