@@ -1,5 +1,5 @@
-- var real_menu = [{url: '/register', name: 'Регистрация'}]
-- var future_menu = [{url: '/profile', name: 'Профиль'}, {url: '/forms', name: 'Мои анкеты'}, {url: '/coplayers', name: 'Мои соигроки'}, {url: '/coplayers_posts', name: 'Лента соигроков'}, {url: '/friends', name: 'Мои друзья'}, {url: '/friends_posts', name: 'Лента друзей'}, {url: '/discussions', name: 'Дискуссии'}, {url: '/private_messages', name: 'Личные сообщения'}, {url: '/players_rating', name: 'Рейтинг игроков'}, {url: '/my_roleplays', name: 'Мои ролевые'}, {url: '/my_own', name: 'Созданные мной'}, {url: '/participate_roleplays', name: 'Участвую в ролевых'}, {url: '/roleplays_list', name: 'Список ролевых'}, {url: '/roleplays_rating', name: 'Рейтинг ролевых'}, {url: '/settings', name: 'Настройки'}, {url: '/exit', name: 'Выйти'}]
+- var real_menu = [{url: '/register', name: 'Регистрация'}, {url: '/', name: 'Главная'}, {url: '/profile', name: 'Профиль'}, {url: '/diary', name: 'Дневник'}]
+- var future_menu = [{url: '/forms', name: 'Мои анкеты'}, {url: '/coplayers', name: 'Мои соигроки'}, {url: '/coplayers_posts', name: 'Лента соигроков'}, {url: '/friends', name: 'Мои друзья'}, {url: '/friends_posts', name: 'Лента друзей'}, {url: '/discussions', name: 'Дискуссии'}, {url: '/private_messages', name: 'Личные сообщения'}, {url: '/players_rating', name: 'Рейтинг игроков'}, {url: '/my_roleplays', name: 'Мои ролевые'}, {url: '/my_own', name: 'Созданные мной'}, {url: '/participate_roleplays', name: 'Участвую в ролевых'}, {url: '/roleplays_list', name: 'Список ролевых'}, {url: '/roleplays_rating', name: 'Рейтинг ролевых'}, {url: '/settings', name: 'Настройки'}, {url: '/exit', name: 'Выйти'}]
 - var date = [{number: "1"}, {number: "2"}, {number: "3"}, {number: "4"}, {number: "5"}, {number: "6"}, {number: "7"}, {number: "8"}, {number: "9"}, {number: "10"}, {number: "11"}, {number: "12"}, {number: "13"}, {number: "14"}, {number: "15"}, {number: "16"}, {number: "17"}, {number: "18"}, {number: "19"}, {number: "20"}, {number: "21"}, {number: "22"}, {number: "23"}, {number: "24"}, {number: "25"}, {number: "26"}, {number: "27"}, {number: "28"}, {number: "29"}, {number: "30"}, {number: "31"}]
 - var mounth = [{name: "Январь"}, {name: "Февраль"}, {name: "Март"}, {name: "Апрель"}, {name: "Май"}, {name: "Июнь"}, {name: "Июль"}, {name: "Август"}, {name: "Сентябрь"}, {name: "Октябрь"}, {name: "Ноябрь"}, {name: "Декабрь"}]
 - var year = [{number: "1970"}, {number: "1971"}, {number: "1972"}, {number: "1973"}, {number: "1974"}, {number: "1975"}, {number: "1976"}, {number: "1977"}, {number: "1978"}, {number: "1979"},  {number: "1980"}, {number: "1981"}, {number: "1982"}, {number: "1983"}, {number: "1984"}, {number: "1985"}, {number: "1986"}, {number: "1987"}, {number: "1988"}, {number: "1989"}, {number: "1990"}, {number: "1991"}, {number: "1992"}, {number: "1993"}, {number: "1994"}, {number: "1995"}, {number: "1996"}, {number: "1997"}, {number: "1998"}, {number: "1999"}, {number: "2000"}, {number: "2001"}, {number: "2002"}]
@@ -17,8 +17,9 @@ html(lang="ru")
     div.main_content
 
       div.header
-        h1
-          a(href="/") Your Roleplays
+        block header
+          h1
+            a(href="/") Your Roleplays
 
       div.page_content
 
