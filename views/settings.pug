@@ -1,14 +1,94 @@
 extends layout
 
-block header
-  h1(class="head") Страница с настройками
-  p(class="day") Была создана 9 января 2020 года
+block title
+  title Настройки
 
 block content
-  h2 Настройки
-  p Можно будет настроить:
-  ul(class="main")
-    li данные профиля;
-    li доступ к дневнику;
-    li дизайн;
-    li и ещё много чего.
+
+  div.content
+
+    h3.settings Настройки профиля
+    h4 Личная информация
+    p Текущий никнейм Никто
+    br
+    form(action="/profile" method="post")
+      label(for="nickname") Никнейм
+      br
+      input(type="text" name="nickname_field" id="nickname")
+      br
+      br
+      label(for="date_of_birth") Дата рождения
+      br
+      mixin date(number)
+        option.date= number
+      select
+        each i in date
+          +date(i.number)
+      |
+      mixin mounth(name)
+        option.mounth= name
+      select
+        each i in mounth
+          +mounth(i.name)
+      |
+      mixin year(number)
+        option.year= number
+      select
+        each i in year
+          +year(i.number)
+      br
+      br
+      p Текущий город Нигде
+      br
+      label(for="city") Город
+      br
+      input(type="text" name="city_field" id="city")
+      br
+      br
+      input(type="submit" value="Сохранить изменения")
+
+    h4 Настройки доступа
+    form(action="/profile" method="post")
+      label(for="password") Cтарый пароль
+      br
+      input(type="password" name="password_field" id="password")
+      br
+      br
+      label(for="password") Новый пароль
+      br
+      input(type="password" name="password_field" id="password")
+      br
+      br
+      label(for="password") Введите ещё раз новый пароль
+      br
+      input(type="password" name="password_field" id="password")
+      br
+      br
+      p Текущий e-mail sosipisos@ubludok.ru
+      br
+      label(for="email") Новый e-mail
+      br
+      input(type="email" name="email_field" id="email")
+      br
+      br
+      input(type="submit" value="Сохранить изменения")
+    h4 Загрузка аватарок
+      form(enctype="multipart/form-data" action="/profile" method="post")
+        label(for="avatar")
+        br
+        input(type="button" value="Загрузить")
+        br
+        br
+        input(type="button" value="Загрузить")
+        br
+        br
+        input(type="button" value="Загрузить")
+        br
+        br
+        input(type="button" value="Загрузить")
+        br
+        br
+        input(type="button" value="Загрузить")
+        br
+        br
+        input(type="submit" value="Сохранить изменения")
