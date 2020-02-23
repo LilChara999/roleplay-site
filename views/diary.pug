@@ -1,13 +1,71 @@
 extends layout
 
+block title
+  title Мой днеффник
+
 block header
-  h1(class="head") Днявка
-  p(class="day") Была создана 8 декабря 2019 года
+  h1
+    a(href="/diary") Мой днеффник
 
 block content
-  h2 Это будет днявка
-  p В днявке должны быть возможности:
-  ul(class="main")
-    li добавлять записи;
-    li скрывать свои записи;
-    li комментировать записи.
+
+  div.content
+
+    div.date_and_time
+      p.h3 Сегодня
+      p.gray - 16 февраля 2020 года
+
+    div.post
+      div.post_title
+        a.post_name(href="/dashboard")
+          h2 Постик номер три
+        a.nickname(href="/dashboard")
+          p Никто
+        p.gray 16 февраля 2020 года, 19:41:43 +2GTM
+      div.post_content
+        div.user_avatar
+          a(href="/register")
+            img(src="images/52.png")
+        div.text_and_comments
+          div.text
+            p Но я его написала только потому, что хочу, чтоб вы знали, что я работаю!
+          div.comments
+            a(href="/dashboard") Комментировать
+
+    div.post
+      div.post_title
+        a.post_name(href="/dashboard")
+          h2 Постик номер два
+        a.nickname(href="/dashboard")
+          p Никто
+        p.gray 16 февраля 2020 года, 14:58:23 +2GTM
+      div.post_content
+        div.user_avatar
+          a(href="/register")
+            img(src="images/52.png")
+        div.text_and_comments
+          div.text
+            p Конечно, это уже другой текст, отличный от того, который был на главной.
+          div.comments
+            a(href="/dashboard") Комментировать
+
+    div.date_and_time
+      p.h3 Вчера
+      p.gray - 15 февраля 2020 года
+
+    div.post
+      div.post_title
+        a.post_name(href="/dashboard")
+          h2 Постик номер раз
+        a.nickname(href="/dashboard")
+          p Никто
+        p.gray 15 февраля 2020 года, 20:40:00 +2GTM
+      div.post_content
+        div.user_avatar
+          a(href="/register")
+            img(src="images/Chara.png")
+        div.text_and_comments
+          div.text
+            p Да, здесь всё так же, как и на главной, потому что я ленивая жопа.
+          div.comments
+            a(href="/dashboard") Комментировать
