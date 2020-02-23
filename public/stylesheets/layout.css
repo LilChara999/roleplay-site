@@ -175,3 +175,31 @@ label {
   padding-top: 10px;
   padding-left: 20px;
 }
+
+/*для профиля*/
+
+.all_info {
+  display: flex;
+  align-content: space-between;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 10px;
+  flex-grow: 1;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.profile_image {
+  object-fit: none;
+  margin-bottom: 10px;
+}
+
+.for_profile {
+  padding: 0;
+  font-size: 16px;
+  list-style: none;
+}
