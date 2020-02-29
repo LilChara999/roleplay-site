@@ -11,19 +11,14 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const vue = require('vue');
 const compiler = require('vue-template-compiler');
-
-require.extensions['.vue'] = (module, filename) => {
-    let file = fs.readFileSync(filename, 'utf8');
-    let {script, template} = compiler.parseComponent(file);
-    let {render, staticRenderFns} = compiler.compile(template.content);
-    let result = `(function(){'use strict';${script.content}})();Object.assign(module.exports,{render:function(){${render}},staticRenderFns:[${staticRenderFns.map(code => {
-        return `function(){${code}}`;
-    }).join(',')}]});`;
-     module._compile(result, filename);
-};
+const crypto = require('crypto');
+const jwt = require('jsonwebtoken');
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/roleplay_site');
+
+require('./models/user');
+require('./config/passport');
 
 var usersRouter = require('./routes/users');
 var dashboardRouter = require('./routes/dashboard');
@@ -60,7 +55,6 @@ app.use(session({
   saveUninitialized: false,
   resave: false
 }));
-
 app.use(passport.initialize());
 app.use(passport.session());
 
