@@ -20,10 +20,10 @@ html(lang="ru")
                 slot(name="body")
                 div.sign_in_form
                   form(class="login" "v-on:submit.prevent"="login")
-                    label(for="login") Логин
+                    label(for="log_in") Логин
                     |
                     |
-                    input(required v-model="username" type="text" name="login_field" id="login")
+                    input(required v-model="username" type="text" name="login_field" id="log_in")
                     br
                     br
                     label(for="password") Пароль
