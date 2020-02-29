@@ -12,8 +12,6 @@ const passport = require('passport');
 const vue = require('vue');
 const compiler = require('vue-template-compiler');
 
-// require('./config/passport');
-
 require.extensions['.vue'] = (module, filename) => {
     let file = fs.readFileSync(filename, 'utf8');
     let {script, template} = compiler.parseComponent(file);
@@ -27,7 +25,6 @@ require.extensions['.vue'] = (module, filename) => {
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/roleplay_site');
 
-var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var dashboardRouter = require('./routes/dashboard');
 var registerRouter = require('./routes/register');
